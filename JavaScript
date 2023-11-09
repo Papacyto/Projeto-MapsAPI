@@ -1,0 +1,50 @@
+let map;
+
+async function initMap() {
+  //@ts-ignore
+  const { Map } = await google.maps.importLibrary("maps");
+
+  map = new Map(document.getElementById("map"), {
+    center: { lat: -22.9068, lng: -43.1729 },
+    zoom: 12,
+  });
+  
+   var marcador1 = new google.maps.Marker({
+    position: { lat: -22.9068, lng: -43.1729 }, // Coordenadas do marcador 1
+    map: map,
+    title: 'Marcador 1'
+  });
+  
+  var marcador2 = new google.maps.Marker({
+    position: { lat: -22.9176, lng: -43.2298 }, // Coordenadas do marcador 2
+    map: map,
+    title: 'Marcador 2'
+  });
+
+  var marcador3 = new google.maps.Marker({
+    position: { lat: -22.9737, lng: -43.1907  }, // Coordenadas do marcador 3
+    map: map,
+    title: 'Marcador 3'
+  });
+  
+    var marcador4 = new google.maps.Marker({
+    position: { lat: -22.9733, lng: -43.1900  }, // Coordenadas do marcador 4
+    map: map,
+    title: 'Marcador 4'
+  });
+  
+  	var marcador5 = new google.maps.Marker({
+    position: { lat: -22.9798, lng: -43.2334  }, // Coordenadas da PUC -
+    map: map,
+    title: 'Marcador PUC-RJ'
+  });
+  
+  	var marcador6 = new google.maps.Marker({
+    position: { lat: -22.9794, lng: -43.2336  }, // Coordenadas da Pastoral - PUC 4 -
+    map: map,
+    title: 'Marcador Pastoral'
+    
+  });
+}
+
+initMap();
